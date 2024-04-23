@@ -10,7 +10,7 @@ on:
           - 'alpine'
           - 'neo4j'
           - 'openjdk'
-          - 'golang'
+          - 'mysql'
           - 'DockasaurusRX'
 jobs:
   pull-and-run-docker-image:
