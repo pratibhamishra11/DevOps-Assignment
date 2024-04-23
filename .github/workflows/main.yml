@@ -20,3 +20,5 @@ jobs:
         uses: actions/checkout@v2
       - name: Pull Docker image
         run: docker pull ${{ github.event.inputs.image-choice }}
+      - name: Run Docker image
+        run: docker run ${{ github.event.inputs.image-choice }}
