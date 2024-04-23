@@ -1,0 +1,22 @@
+name: Pratibha Mishra Workflow
+on:
+  workflow_dispatch:
+    inputs:
+      image-choice:
+        description: 'Choose the image you wish to extract.'
+        type: choice
+        default: 'ubuntu'
+        options:
+          - 'alpine'
+          - 'neo4j'
+          - 'openjdk'
+          - 'golang'
+          - 'DockasaurusRX'
+jobs:
+  pull-and-run-docker-image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Pull Docker image
+        run: docker pull ${{ github.event.inputs.image-choice }}
