@@ -1,4 +1,4 @@
-name: Pratibha Mishra Workflow
+name: Pratibha Mishra Assignment
 on:
   workflow_dispatch:
     inputs:
